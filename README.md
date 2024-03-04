@@ -4,7 +4,7 @@ wikipedia,weather,traffic...
 - discord.py
 - wikipedia-api
 ```bash
-pip install wikipedia-api
+pip install wikipedia
 ```
 - python-dotenv
 ```bash
