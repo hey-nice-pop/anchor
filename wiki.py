@@ -25,7 +25,6 @@ async def wiki_search(interaction: discord.Interaction, keyword: str):
                 # defer した後は followup.send を使用
                 await interaction.followup.send(f"**{page.title}**\n{summary}\n詳細: {page.url}", ephemeral=False)
             except wikipedia.exceptions.DisambiguationError as e:
-                # DisambiguationError をキャッチした場合の処理
                 disambiguation_url = "https://ja.wikipedia.org/wiki/" + selected_value.replace(" ", "_")
                 message = f"'{selected_value}'には複数の意味があります。詳細はこちらをご覧ください: {disambiguation_url}"
                 await interaction.followup.send(message, ephemeral=False)
@@ -35,7 +34,7 @@ async def wiki_search(interaction: discord.Interaction, keyword: str):
         for result in search_results
     ]
     select = WikiSelect(options=options)
-    view = discord.ui.View()
+    view = discord.ui.View(timeout=600)  # ここでタイムアウトを10分に設定
     view.add_item(select)
 
     await interaction.response.send_message("以下の結果から選択してください:", view=view, ephemeral=False)
