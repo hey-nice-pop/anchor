@@ -6,6 +6,14 @@ wikipedia,weather,traffic...
 ```bash
 pip install wikipedia
 ```
+- requests
+```bash
+pip install requests
+```
+- beautifulsoup4
+```bash
+pip install beautifulsoup4
+```
 - python-dotenv
 ```bash
 pip install python-dotenv

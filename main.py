@@ -29,6 +29,10 @@ minesweeper.setup(bot)
 import wiki
 wiki.setup(bot)
 
+# news.pyのコマンドをセットアップする
+import news  # news.pyモジュールをインポート
+news.setup(bot)
+
 @bot.event
 async def on_message(message):
     if message.author.bot:
