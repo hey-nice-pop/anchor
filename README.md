@@ -31,6 +31,7 @@ pip install python-dotenv
 BOT_TOKEN = 'YOURTOKEN' # bottoken
 ```
 ## 機能
-- Wikipedia
-- 天気予報(予定)
+- Wikipedia検索
+- 最新ニュース取得
+- 天気予報
 - 交通情報(予定)
