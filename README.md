@@ -14,10 +14,6 @@ pip install requests
 ```bash
 pip install beautifulsoup4
 ```
-- aiohttp
-```bash
-pip install aiohttp
-```
 - geocoder
 ```bash
 pip install geocoder
