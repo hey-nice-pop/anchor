@@ -33,6 +33,10 @@ wiki.setup(bot)
 import news  # news.pyモジュールをインポート
 news.setup(bot)
 
+# weather.py
+import weather
+weather.setup(bot)
+
 @bot.event
 async def on_message(message):
     if message.author.bot:
