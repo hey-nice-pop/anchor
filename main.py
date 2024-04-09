@@ -37,13 +37,9 @@ news.setup(bot)
 import weather
 weather.setup(bot)
 
-@bot.event
-async def on_message(message):
-    if message.author.bot:
-        return
-
-    # 他のコマンドも処理
-    await bot.process_commands(message)
+# voice.pyモジュールをインポート
+import voice
+voice.setup(bot)
 
 # Discordボットを起動
 bot.run(YOUR_BOT_TOKEN)

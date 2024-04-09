@@ -3,24 +3,20 @@ wikipedia,weather,traffic...
 ## 必要
 - discord.py
 - wikipedia-api
-```bash
-pip install wikipedia
-```
 - requests
-```bash
-pip install requests
-```
 - beautifulsoup4
-```bash
-pip install beautifulsoup4
-```
 - geocoder
-```bash
-pip install geocoder
-```
+- soundfile
+- pyopenjtalk
 - python-dotenv
 ```bash
+pip install wikipedia
+pip install requests
+pip install beautifulsoup4
+pip install geocoder
 pip install python-dotenv
+pip install soundfile
+pip install pyopenjtalk
 ```
 - .env
 ```.env
