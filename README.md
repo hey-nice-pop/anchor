@@ -6,9 +6,11 @@ wikipedia,weather,traffic...
 - requests
 - beautifulsoup4
 - geocoder
+- python-dotenv
 - soundfile
 - pyopenjtalk
-- python-dotenv
+- emoji
+
 ```bash
 pip install wikipedia
 pip install requests
@@ -17,6 +19,7 @@ pip install geocoder
 pip install python-dotenv
 pip install soundfile
 pip install pyopenjtalk
+pip install emoji
 ```
 - .env
 ```.env
