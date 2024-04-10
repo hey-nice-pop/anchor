@@ -65,10 +65,9 @@ def setup(bot):
 async def play_voice(text, voice_client):
     if voice_client and voice_client.channel:
         
-        # サーバー絵文字と通常の絵文字を「絵文字」という文字で置き換える
+        # サーバー絵文字を「絵文字」という文字で置き換える
         text = re.sub(r"<a?:[a-zA-Z0-9_]+:[0-9]+>", "絵文字", text)  # サーバー絵文字の置換
-
-        # 一般的なUnicode絵文字を「絵文字」という単語に置き換える（例示の範囲を使用）
+        # 一般的なUnicode絵文字を「絵文字」という単語に置き換える
         text = emoji.replace_emoji(text,replace='絵文字')
 
         # メンションをユーザー名に置換
@@ -81,16 +80,13 @@ async def play_voice(text, voice_client):
         text = re.sub(r'https?://\S+', 'URL', text)
         # スポイラーを置換
         text = re.sub(r'\|\|(.*?)\|\|', 'ネタバレ', text)
-        
         # 強調を置換
         text = text.replace('*', '').replace('_', '')
 
         # テキストから音声データとサンプリングレートを取得
         wave, sr = pyopenjtalk.tts(text)
-
         # 音声データの振幅を正規化
         wave_norm = wave / np.max(np.abs(wave))
-
         # 正規化した音声データをバイト配列に変換
         sound = np.int16(wave_norm * 32767).tobytes()
 
