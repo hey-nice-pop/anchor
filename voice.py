@@ -83,6 +83,11 @@ async def play_voice(text, voice_client):
         # 強調を置換
         text = text.replace('*', '').replace('_', '')
 
+        # 文字数のチェック
+        if len(text) > 1000:
+            print("メッセージが1000文字を超えているため、読み上げません。")
+            return
+
         # テキストから音声データとサンプリングレートを取得
         wave, sr = pyopenjtalk.tts(text)
         # 音声データの振幅を正規化
