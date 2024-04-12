@@ -16,7 +16,7 @@ def extract_location_details(address):
 
     # 逆順で住所コンポーネントを処理
     for component in reversed(components):
-        if "都" in component or "府" in component or "県" in component:
+        if "都" in component or "府" in component or "県" in component or "道" in component:
             prefecture = component
         elif "市" in component or "区" in component or "町" in component or "村" in component:
             city = component
