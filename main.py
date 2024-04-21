@@ -14,7 +14,7 @@ bot = commands.Bot(
     command_prefix='/', 
     intents=intents, 
     sync_commands=True,
-    activity=discord.Game("テスト")
+    activity=discord.Game("双眼鏡")
 )
 
 @bot.event
