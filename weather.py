@@ -30,10 +30,7 @@ def extract_location_details(address):
 
 # 天気情報を取得する関数
 def get_weather_info(url):
-    headers = {
-        'User-Agent': 'anchor (https://github.com/hey-nice-pop/anchor; imo_watch@icloud.com)'
-    }
-    response = requests.get(url, headers=headers)
+    response = requests.get(url)
     response.encoding = 'utf-8'  # 追加: エンコーディングをUTF-8に設定
     soup = BeautifulSoup(response.text, 'html.parser')
     # 日付を取得
@@ -102,10 +99,7 @@ def setup(bot: commands.Bot):
     @bot.tree.command(name="weather", description="指定した地名の天気を表示します")
     async def weather(interaction: discord.Interaction, location: str):
         # geocoderを使用して地名から住所を取得
-        headers = {
-        'User-Agent': 'anchor (https://github.com/hey-nice-pop/anchor; imo_watch@icloud.com)'
-        }
-        g = geocoder.osm(location, country_codes='jp', headers=headers)
+        g = geocoder.osm(location, country_codes='jp')
         if not g.ok:
             await interaction.response.send_message('地名を特定できませんでした。')
             return
