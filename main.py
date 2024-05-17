@@ -29,7 +29,7 @@ bot = commands.Bot(
 async def on_ready():
     await bot.tree.sync()
     print(f'ログイン完了: {bot.user}')
-'''
+
 minesweeper.setup(bot)
 
 wiki.setup(bot)
@@ -39,7 +39,6 @@ news.setup(bot)
 weather.setup(bot)
 
 voice.setup(bot)
-'''
 
 # Discordボットを起動
 bot.run(YOUR_BOT_TOKEN)
