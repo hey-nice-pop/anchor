@@ -4,6 +4,14 @@ import config
 
 import game.minesweeper as minesweeper
 
+import wiki
+
+import news
+
+import weather
+
+import voice
+
 YOUR_BOT_TOKEN = config.BOT_TOKEN
 
 # インテントを有効化
@@ -21,25 +29,17 @@ bot = commands.Bot(
 async def on_ready():
     await bot.tree.sync()
     print(f'ログイン完了: {bot.user}')
-
-# マインスイーパー機能のセットアップ
+'''
 minesweeper.setup(bot)
 
-# wiki.pyからコマンドをロード
-import wiki
 wiki.setup(bot)
 
-# news.pyのコマンドをセットアップする
-import news  # news.pyモジュールをインポート
 news.setup(bot)
 
-# weather.py
-import weather
 weather.setup(bot)
 
-# voice.pyモジュールをインポート
-import voice
 voice.setup(bot)
+'''
 
 # Discordボットを起動
 bot.run(YOUR_BOT_TOKEN)
