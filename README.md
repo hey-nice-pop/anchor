@@ -5,7 +5,6 @@ wikipedia,weather,traffic...
 - wikipedia-api
 - requests
 - beautifulsoup4
-- geocoder
 - python-dotenv
 - soundfile
 - pyopenjtalk
@@ -15,7 +14,6 @@ wikipedia,weather,traffic...
 pip install wikipedia
 pip install requests
 pip install beautifulsoup4
-pip install geocoder
 pip install python-dotenv
 pip install soundfile
 pip install pyopenjtalk
@@ -29,4 +27,4 @@ BOT_TOKEN = 'YOURTOKEN' # bottoken
 - Wikipedia検索
 - 最新ニュース取得
 - 天気予報
-- 交通情報(予定)
+- ボイスチャンネルでのチャット読み上げ
